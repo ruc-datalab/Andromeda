@@ -1,0 +1,1 @@
+{"res": "['use_pure=True', 'ssl_ca=\"path/to/ca.pem\"', 'ssl_cert=\"path/to/cert.pem\"', 'ssl_key=\"path/to/key.pem\"']"}

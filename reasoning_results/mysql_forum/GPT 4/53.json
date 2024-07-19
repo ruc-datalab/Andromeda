@@ -1,0 +1,1 @@
+{"res": "['explicit_defaults_for_timestamp=TRUE', 'innodb_buffer_pool_size', 'max_connections', 'query_cache_size', 'thread_cache_size', 'wait_timeout', 'connect_timeout']"}

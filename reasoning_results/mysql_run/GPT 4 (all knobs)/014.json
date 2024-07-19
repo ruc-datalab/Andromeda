@@ -1,0 +1,3 @@
+{
+    "res": "['innodb_flush_log_at_trx_commit', 'sync_binlog', 'autocommit', 'innodb_autoinc_lock_mode', 'innodb_buffer_pool_size']"
+}

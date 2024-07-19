@@ -1,0 +1,1 @@
+{"res": "['YEAR(tbl_trade.create_date) AS YearPart']"}

@@ -1,0 +1,1 @@
+{"res": "['bulk_insert_buffer_size', 'max_allowed_packet', 'read_buffer_size', 'tmp_table_size', 'innodb_log_buffer_size', 'sort_buffer_size', 'innodb_sort_buffer_siz', 'key_buffer_size', 'innodb_temp_data_file_path', 'innodb_log_file_size']"}

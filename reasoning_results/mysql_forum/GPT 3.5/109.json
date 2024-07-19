@@ -1,0 +1,1 @@
+{"res": "['innodb_force_recovery=1', 'innodb_purge_threads=0', 'innodb_file_per_table=1']"}

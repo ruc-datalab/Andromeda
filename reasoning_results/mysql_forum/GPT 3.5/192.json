@@ -1,0 +1,1 @@
+{"res": "['innodb_buffer_pool_size', 'innodb_log_file_size', 'innodb_data_file_path', 'innodb_doublewrite', 'innodb_file_per_table']"}

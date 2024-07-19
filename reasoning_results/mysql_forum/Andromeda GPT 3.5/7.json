@@ -1,0 +1,1 @@
+{"res": "['socket', 'max_allowed_packet', 'long_query_time', 'myisam_sort_buffer_size', 'connect_timeout', 'innodb_fast_shutdown', 'wait_timeout', 'open_files_limit', 'read_buffer_size', 'interactive_timeout', 'max_binlog_size', 'sort_buffer_size', 'max_connect_errors', 'tmp_table_size', 'port', 'thread_cache_size', 'max_connections', 'tmpdir', 'thread_stack']"}

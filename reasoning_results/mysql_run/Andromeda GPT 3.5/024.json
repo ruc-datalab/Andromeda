@@ -1,0 +1,1 @@
+{"res": "['max_connections', 'key_buffer_size', 'thread_cache_size', 'local_infile', 'innodb_flush_log_at_trx_commit', 'max_allowed_packet']"}

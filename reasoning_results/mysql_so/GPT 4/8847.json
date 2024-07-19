@@ -1,0 +1,1 @@
+{"res": "['relay_log', 'sync_binlog=1', 'binlog_format=ROW', 'read_only=ON']"}

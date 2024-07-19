@@ -1,0 +1,1 @@
+{"res": "['hibernate.jdbc.batch_size', 'hibernate.jdbc.batch_versioned_data', 'hibernate.order_inserts', 'hibernate.order_updates', 'hibernate.jdbc.batch_order_updates', 'hibernate.jdbc.batch_order_inserts']"}

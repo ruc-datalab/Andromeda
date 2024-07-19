@@ -1,0 +1,1 @@
+{"res": "['sql_mode=NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION', 'innodb_strict_mode=OFF', 'innodb_flush_log_at_trx_commit=2']"}

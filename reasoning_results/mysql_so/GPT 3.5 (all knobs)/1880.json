@@ -1,0 +1,1 @@
+{"res": "['gtid_executed_compression_period', 'gtid_mode', 'slave_sql_verify_checksum', 'slave_transaction_retries', 'sync_binlog']"}

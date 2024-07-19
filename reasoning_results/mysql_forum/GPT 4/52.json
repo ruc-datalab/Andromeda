@@ -1,0 +1,1 @@
+{"res": "['innodb_buffer_pool_size', 'query_cache_size', 'query_cache_type', 'innodb_stats_on_metadata', 'innodb_read_io_threads', 'innodb_write_io_threads']"}

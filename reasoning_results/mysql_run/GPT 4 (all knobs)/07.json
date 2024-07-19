@@ -1,0 +1,1 @@
+{"res": "To control whether the MySQL server performs proxy user mapping on the validation plug-in that requests it, you should use the following parameter:\n\n```json\n['check_proxy_users']\n```"}

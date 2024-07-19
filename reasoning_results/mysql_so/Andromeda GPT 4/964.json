@@ -1,0 +1,1 @@
+{"res": "Based on the provided information and the issues described in your query, the following parameters are recommended to address the problems with MySQL configuration and performance:\n\n['max_connections', 'max_connect_errors', 'join_buffer_size', 'sort_buffer_size', 'read_rnd_buffer_size']"}

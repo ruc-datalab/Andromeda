@@ -1,0 +1,1 @@
+{"res": "['innodb_flush_log_at_trx_commit=2', 'innodb_doublewrite=0', 'innodb_flush_method=O_DIRECT']"}

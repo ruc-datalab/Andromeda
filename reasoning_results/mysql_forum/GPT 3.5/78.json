@@ -1,0 +1,1 @@
+{"res": "['innodb_force_recovery = 6', 'max_allowed_packet = 64M', 'net_write_timeout = 600', 'key_buffer_size = 8388608']"}

@@ -1,0 +1,1 @@
+{"res": "['gtid_executed_compression_period', 'gtid_mode', 'innodb_autoinc_lock_mode', 'innodb_flush_log_at_trx_commit', 'innodb_log_file_size', 'innodb_log_files_in_group', 'innodb_log_group_home_dir', 'innodb_undo_directory', 'server_id']"}

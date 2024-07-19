@@ -1,0 +1,1 @@
+{"res": "['innodb_force_recovery=4', 'innodb_purge_threads=0', 'innodb_buffer_pool_size=1G', 'innodb_log_file_size=256M', 'innodb_flush_log_at_trx_commit=2']"}

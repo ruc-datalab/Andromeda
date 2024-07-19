@@ -1,0 +1,1 @@
+{"res": "['enable_bitmapscan', 'effective_cache_size', 'random_page_cost', 'cpu_tuple_cost', 'cpu_index_tuple_cost', 'cpu_operator_cost']"}

@@ -1,0 +1,3 @@
+{
+    "res": "['sync_binlog*', 'relay_log_info_repository', '*master_info_repository', 'slave_parallel_workers', 'slave_sql_verify_checksum', 'binlog_checksum']"
+}

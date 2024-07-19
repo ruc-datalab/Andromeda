@@ -1,0 +1,1 @@
+{"res": "['maintenance_work_mem', 'work_mem', 'wal_buffers', 'shared_buffers', 'max_locks_per_transaction']"}

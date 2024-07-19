@@ -1,0 +1,1 @@
+{"res": "['use_persistent_connection', 'optimize_table_caching', 'adjust_autovacuum_settings', 'increase_work_mem', 'set_effective_io_concurrency', 'implement_partitioning', 'enable_resultset_caching', 'configure_connection_pooling', 'tune_query_cache_size', 'monitor_disk_usage']"}

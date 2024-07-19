@@ -1,0 +1,1 @@
+{"res": "['tmp_table_size', 'max_heap_table_size', 'join_buffer_size', 'query_cache_type', 'query_cache_size']"}

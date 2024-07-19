@@ -1,0 +1,1 @@
+{"res": "['track_activities', 'track_counts', 'autovacuum', 'log_autovacuum_min_duration', 'log_lock_waits', 'log_statement', 'log_duration', 'log_min_duration_statement', 'log_connections', 'log_disconnections']"}

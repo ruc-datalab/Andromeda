@@ -1,0 +1,1 @@
+{"res": "['log_error', 'slow_query_log', 'slow_query_log_file', 'log_output', 'log_rotate_size', 'log_rotate_age', 'max_binlog_size', 'expire_logs_days']"}

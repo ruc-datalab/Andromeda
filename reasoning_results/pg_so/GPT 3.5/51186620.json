@@ -1,0 +1,1 @@
+{"res": "['archive_mode', 'archive_command', 'archive_timeout', 'wal_level', 'max_wal_senders', 'max_replication_slots', 'wal_keep_segments']"}

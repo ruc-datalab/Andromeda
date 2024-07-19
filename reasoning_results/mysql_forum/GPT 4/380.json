@@ -1,0 +1,1 @@
+{"res": "['Ensure source database (MS Access) uses UTF-8 encoding', 'Set MySQL database character set to utf8mb4', 'Set MySQL collation to utf8mb4_unicode_ci', 'Verify connection character set is utf8mb4', 'Check client (interface/application) supports UTF-8 display', 'Ensure correct handling of character encoding during data export/import']"}

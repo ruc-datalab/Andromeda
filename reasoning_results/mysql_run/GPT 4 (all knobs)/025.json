@@ -1,0 +1,3 @@
+{
+    "res": "['innodb_lock_wait_timeout', 'innodb_buffer_pool_size', 'max_connections', 'table_open_cache', 'thread_cache_size', 'query_cache_size', 'query_cache_type']"
+}

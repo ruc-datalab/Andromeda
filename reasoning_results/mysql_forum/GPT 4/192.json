@@ -1,0 +1,1 @@
+{"res": "['innodb_file_per_table', 'innodb_flush_log_at_trx_commit', 'innodb_log_buffer_size', 'innodb_buffer_pool_size', 'skip-bdb', 'socket', 'datadir', 'log_error', 'pid-file']"}

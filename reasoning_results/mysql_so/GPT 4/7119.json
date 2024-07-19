@@ -1,0 +1,1 @@
+{"res": "['group_replication_ip_whitelist', 'group_replication_recovery_retry_count', 'group_replication_recovery_reconnect_interval', 'group_replication_communication_max_message_size', 'group_replication_group_seeds', 'group_replication_bootstrap_group', 'group_replication_start_on_boot', 'group_replication_ssl_mode']"}

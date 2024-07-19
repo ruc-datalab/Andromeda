@@ -1,0 +1,1 @@
+{"res": "['Ensure indexing on upline_id and id columns', 'Consider using a recursive CTE if using MySQL 8.0+', 'Reduce the use of temporary tables', 'Optimize SELECT DISTINCT usage', 'Check and optimize the configuration of the temp_table_size and max_heap_table_size parameters']"}

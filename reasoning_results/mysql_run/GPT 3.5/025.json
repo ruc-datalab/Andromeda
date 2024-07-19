@@ -1,0 +1,1 @@
+{"res": "['innodb_buffer_pool_size', 'innodb_lock_wait_timeout', 'innodb_io_capacity', 'innodb_thread_concurrency', 'innodb_flush_log_at_trx_commit']"}

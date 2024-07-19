@@ -1,0 +1,1 @@
+{"res": "['innodb_buffer_pool_size', 'innodb_buffer_pool_instances', 'innodb_io_capacity', 'innodb_thread_concurrency', 'max_connections', 'query_cache_size', 'query_cache_limit', 'max_allowed_packet']"}

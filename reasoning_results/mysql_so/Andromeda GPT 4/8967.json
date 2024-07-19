@@ -1,0 +1,3 @@
+{
+    "res": "['query_cache_size', 'sort_buffer_size', 'read_rnd_buffer_size', 'join_buffer_size', 'max_connections', 'thread_cache_size', 'tmp_table_size', 'max_heap_table_size', 'key_buffer_size']"
+}

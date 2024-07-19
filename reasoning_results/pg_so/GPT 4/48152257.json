@@ -1,0 +1,1 @@
+{"res": "[\"temp_tablespaces\", \"initdb\", \"pg_basebackup\", \"fsync\", \"shared_buffers\", \"maintenance_work_mem\", \"effective_io_concurrency\", \"max_parallel_maintenance_workers\"]"}

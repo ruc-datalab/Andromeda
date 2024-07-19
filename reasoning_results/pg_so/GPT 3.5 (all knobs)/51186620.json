@@ -1,0 +1,1 @@
+{"res": "['wal_level', 'wal_compression', 'wal_buffers', 'wal_segment_size', 'wal_block_size', 'wal_keep_size', 'wal_sender_timeout', 'wal_sync_method', 'wal_writer_delay', 'wal_writer_flush_after', 'wal_recycle', 'wal_init_zero', 'wal_log_hints', 'wal_debug', 'wal_skip_threshold', 'wal_consistency_checking', 'max_wal_senders', 'max_replication_slots', 'wal_level']"}

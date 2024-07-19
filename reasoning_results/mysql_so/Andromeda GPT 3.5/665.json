@@ -1,0 +1,1 @@
+{"res": "['innodb_buffer_pool_size', 'innodb_print_all_deadlocks', 'key_buffer_size', 'max_allowed_packet', 'general_log', 'table_open_cache', 'thread_cache_size', 'innodb_log_buffer_size']"}

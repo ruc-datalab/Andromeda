@@ -1,0 +1,1 @@
+{"res": "['max_allowed_packet', 'read_buffer_size', 'net_read_timeout', 'net_write_timeout', 'max_connections', 'thread_cache_size', 'thread_handling', 'thread_stack', 'tmp_table_size', 'transaction_alloc_block_size', 'transaction_allow_batching', 'transaction_isolation', 'transaction_prealloc_size', 'transaction_read_only', 'transaction_write_set_extraction', 'wait_timeout']"}

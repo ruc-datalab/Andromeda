@@ -1,0 +1,1 @@
+{"res": "['max_wal_size', 'wal_keep_segments', 'max_replication_slots', 'max_standby_archive_delay', 'max_standby_streaming_delay', 'checkpoint_timeout', 'checkpoint_completion_target', 'wal_receiver_timeout', 'wal_sender_timeout', 'hot_standby_feedback']"}

@@ -1,0 +1,1 @@
+{"res": "['SELECT id FROM product WHERE title = ?;', 'INSERT INTO product (title, price, `status`) VALUES (?, ?, ?);', 'UPDATE product SET price = ?, `status` = ? WHERE title = ?;']"}

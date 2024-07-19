@@ -1,0 +1,1 @@
+{"res": "['innodb_autoinc_lock_mode', 'innodb_lock_wait_timeout', 'innodb_locks_unsafe_for_binlog', 'innodb_table_locks', 'key_cache_block_size', 'locked_in_memory', 'max_write_lock_count', 'query_alloc_block_size', 'query_cache_wlock_invalidate', 'range_alloc_block_size', 'skip_external_locking', 'table_lock_wait_timeout', 'transaction_alloc_block_size']"}

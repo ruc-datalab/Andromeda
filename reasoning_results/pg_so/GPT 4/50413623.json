@@ -1,0 +1,1 @@
+{"res": "['shared_buffers', 'maintenance_work_mem', 'wal_buffers', 'checkpoint_completion_target', 'max_wal_size', 'min_wal_size', 'wal_level', 'synchronous_commit', 'full_page_writes', 'effective_io_concurrency', 'work_mem']"}

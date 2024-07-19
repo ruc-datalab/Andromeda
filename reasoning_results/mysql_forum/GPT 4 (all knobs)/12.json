@@ -1,0 +1,1 @@
+{"res": "To change the server time to GMT +1 in a database environment, you typically need to adjust the time zone setting. The relevant parameter for setting the time zone in MySQL is:\n\n```plaintext\n['time_zone']\n```"}

@@ -1,0 +1,1 @@
+{"res": "['--password', '--verbose', '--force', '--user=root', '--host=localhost', '--database=mysql']"}

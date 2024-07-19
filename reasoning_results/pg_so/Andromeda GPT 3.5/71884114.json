@@ -1,0 +1,1 @@
+{"res": "['shared_buffers', 'work_mem', 'maintenance_work_mem', 'full_page_writes', 'wal_writer_flush_after']"}

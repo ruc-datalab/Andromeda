@@ -1,0 +1,1 @@
+{"res": "['sslmode=verify-full', 'sslrootcert=root.crt', 'sslcert=server.crt', 'sslkey=server.key']"}

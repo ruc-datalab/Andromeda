@@ -1,0 +1,1 @@
+{"res": "['PGDATA=/var/www/data/pgsql', 'initdb -D /var/www/data/pgsql', 'postgresql.conf', 'VOLUME /var/www/data/pgsql']"}

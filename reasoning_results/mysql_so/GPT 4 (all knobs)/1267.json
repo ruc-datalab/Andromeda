@@ -1,0 +1,1 @@
+{"res": "To reset the global `init_connect` values to remove the incorrect setting that is causing the error, you can set it to an empty string. Here's the parameter you need to adjust:\n\n```sql\nSET GLOBAL init_connect='';\n```\n\nIn the context of the parameters list provided, the relevant parameter to adjust would be:\n\n```json\n[\"init_connect\"]\n```"}

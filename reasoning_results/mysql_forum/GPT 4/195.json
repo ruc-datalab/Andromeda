@@ -1,0 +1,1 @@
+{"res": "['mysqladmin -u root --password= CREATE MyNewDatabase']"}

@@ -1,0 +1,1 @@
+{"res": "['SET LOCAL enable_nestloop TO off;', 'SET LOCAL enable_nestloop TO on;']"}

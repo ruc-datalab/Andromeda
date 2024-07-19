@@ -1,0 +1,1 @@
+{"res": "['max_connections', 'tmp_table_size', 'table_definition_cache', 'max_heap_table_size', 'max_execution_time', 'max_allowed_packet', 'innodb_flush_log_at_trx_commit', 'wait_timeout', 'innodb_buffer_pool_size', 'innodb_file_per_table', 'interactive_timeout', 'innodb_io_capacity', 'innodb_thread_concurrency', 'connect_timeout', 'thread_cache_size']"}

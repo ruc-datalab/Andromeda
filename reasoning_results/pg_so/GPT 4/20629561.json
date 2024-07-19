@@ -1,0 +1,1 @@
+{"res": "['postgresql.conf', 'listen_addresses', 'port', 'pg_ctl', 'systemctl disable postgresql@12-main', 'systemctl stop postgresql@12-main', 'systemctl enable postgresql@13-main', 'systemctl start postgresql@13-main']"}

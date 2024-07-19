@@ -1,0 +1,1 @@
+{"res": "```json\n[\n    \"innodb_force_recovery\",\n    \"innodb_buffer_pool_size\",\n    \"innodb_log_file_size\",\n    \"innodb_log_buffer_size\",\n    \"max_connections\",\n    \"thread_cache_size\"\n]\n```"}

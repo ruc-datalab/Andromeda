@@ -1,0 +1,1 @@
+{"res": "['increase_max_connections', 'optimize_query_cache_size', 'increase_buffer_pool_size', 'optimize_innodb_buffer_pool_size', 'increase_max_allowed_packet']"}

@@ -1,0 +1,1 @@
+{"res": "['unix_socket_directories', 'listen_addresses', 'port', 'shared_buffers', 'max_connections']"}

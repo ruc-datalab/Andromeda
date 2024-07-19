@@ -1,0 +1,1 @@
+{"res": "['fsync', 'wal_level', 'shared_buffers', 'listen_addresses', 'port', 'max_connections', 'unix_socket_directories', 'data_directory']"}

@@ -1,0 +1,1 @@
+{"res": "Based on the issues described in the query and the information provided, the recommended parameters to address the issues with pgbouncer and prepared statements in a Sinatra application using Passenger are:\n\n['pool_mode', 'server_reset_query']"}

@@ -1,0 +1,1 @@
+{"res": "['max_connections', 'wait_timeout', 'interactive_timeout', 'innodb_buffer_pool_size', 'innodb_log_buffer_size', 'innodb_flush_log_at_trx_commit', 'innodb_lock_wait_timeout', 'read_buffer_size', 'read_rnd_buffer_size', 'sort_buffer_size', 'myisam_sort_buffer_size', 'max_allowed_packet']"}

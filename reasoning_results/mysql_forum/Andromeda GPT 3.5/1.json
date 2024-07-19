@@ -1,0 +1,1 @@
+{"res": "Based on the information provided in the reference questions and manuals, the recommended parameters to optimize the MySQL performance for the given scenario would be:\n\n['innodb_buffer_pool_size', 'table_open_cache', 'key_buffer_size', 'tmp_table_size', 'wait_timeout', 'read_buffer_size', 'read_rnd_buffer_size', 'net_buffer_length']"}

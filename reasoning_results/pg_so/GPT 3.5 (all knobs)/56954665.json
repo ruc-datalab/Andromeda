@@ -1,0 +1,1 @@
+{"res": "['shared_buffers', 'max_connections', 'maintenance_work_mem', 'max_worker_processes', 'max_parallel_workers_per_gather', 'max_parallel_workers']"}

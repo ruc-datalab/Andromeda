@@ -1,0 +1,1 @@
+{"res": "['max_connections', 'work_mem', 'maintenance_work_mem', 'autovacuum', 'wal_level', 'shared_buffers']"}

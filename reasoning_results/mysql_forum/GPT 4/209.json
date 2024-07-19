@@ -1,0 +1,1 @@
+{"res": "['CONVERT(CONCAT(\\'<a href=\"https://www.site.com/\\', tb1.id, \\'/\"><img src=\"https://www.site.com/\\', tb1.id, \\'.jpg\"></a>\\') USING latin1) AS Photo']"}

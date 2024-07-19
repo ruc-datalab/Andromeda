@@ -1,0 +1,3 @@
+{
+    "res": "To allow all users to write to the MySQL database when the server is running with the `--read-only` option, you need to disable this read-only mode. The parameter that controls this behavior is:\n\n- `read_only`\n\nTo modify the setting so that all users can write, you should set:\n\n```sql\nSET GLOBAL read_only = OFF;\n```\n\nOr you can change it in the MySQL configuration file (usually `my.cnf` or `my.ini`) under the `[mysqld]` section:\n\n```\n[mysqld]\nread_only = 0\n```\n\nAfter making this change, you will need to restart the MySQL server for the changes to take effect if you modify the configuration file.\n\nHere is the output list format as requested:\n\n```json\n[\"read_only\"]\n```"
+}

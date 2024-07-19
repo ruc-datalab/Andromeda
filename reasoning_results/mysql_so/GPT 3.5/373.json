@@ -1,0 +1,1 @@
+{"res": "['jsonb_exists(contacts, $2)']"}

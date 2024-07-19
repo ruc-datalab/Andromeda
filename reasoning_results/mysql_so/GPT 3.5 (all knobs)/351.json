@@ -1,0 +1,1 @@
+{"res": "['innodb_buffer_pool_size', 'innodb_buffer_pool_instances', 'innodb_flush_method', 'innodb_flush_log_at_trx_commit', 'innodb_log_file_size', 'innodb_sort_buffer_size']"}

@@ -1,0 +1,1 @@
+{"res": "['maintenance_work_mem', 'work_mem', 'wal_buffers', 'checkpoint_completion_target', 'max_wal_size', 'synchronous_commit', 'effective_io_concurrency', 'commit_delay', 'commit_siblings']"}

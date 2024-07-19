@@ -1,0 +1,1 @@
+{"res": "['shared_buffers', 'wal_level', 'max_wal_senders', 'wal_keep_segments', 'max_connections', 'maintenance_work_mem', 'checkpoint_completion_target', 'effective_cache_size', 'work_mem', 'fsync']"}

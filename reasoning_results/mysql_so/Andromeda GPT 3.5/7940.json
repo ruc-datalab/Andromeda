@@ -1,0 +1,1 @@
+{"res": "['key_buffer_size', 'read_rnd_buffer_size', 'max_connections', 'innodb_lru_scan_depth', 'join_buffer_size', 'read_buffer_size', 'table_open_cache', 'max_heap_table_size', 'thread_cache_size', 'tmp_table_size', 'wait_timeout', 'general_log', 'sort_buffer_size', 'innodb_buffer_pool_size']"}

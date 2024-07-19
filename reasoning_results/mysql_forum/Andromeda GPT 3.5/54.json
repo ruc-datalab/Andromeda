@@ -1,0 +1,1 @@
+{"res": "['sort_buffer_size', 'read_buffer_size', 'socket', 'innodb_fast_shutdown', 'tmpdir', 'thread_cache_size', 'join_buffer_size', 'key_buffer_size', 'read_rnd_buffer_size', 'innodb_use_native_aio']"}

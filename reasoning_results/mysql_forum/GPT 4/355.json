@@ -1,0 +1,1 @@
+{"res": "['Open the MySQL configuration file (my.cnf)', 'Locate the [mysqld] section', 'Change the port number by adding or modifying the line: port = your_new_port_number', 'Save the configuration file', 'Restart the MySQL service to apply the changes']"}

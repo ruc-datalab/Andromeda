@@ -1,0 +1,1 @@
+{"res": "['validate_password.policy', 'validate_password.length', 'validate_password.mixed_case_count', 'validate_password.number_count', 'validate_password.special_char_count']"}

@@ -1,0 +1,1 @@
+{"res": "['table_open_cache', 'key_buffer_size', 'long_query_time', 'bulk_insert_buffer_size', 'join_buffer_size', 'max_heap_table_size', 'read_buffer_size', 'read_rnd_buffer_size', 'sort_buffer_size', 'tmp_table_size', 'innodb_random_read_ahead', 'innodb_flush_log_at_trx_commit', 'innodb_log_buffer_size', 'innodb_buffer_pool_size', 'optimizer_switch']"}

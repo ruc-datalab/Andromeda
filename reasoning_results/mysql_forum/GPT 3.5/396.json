@@ -1,0 +1,1 @@
+{"res": "['query_log', 'innodb_flush_log_at_trx_commit=1', 'default-storage-engine=INNODB', 'secure-auth']"}

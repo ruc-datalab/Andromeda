@@ -1,0 +1,1 @@
+{"res": "['innodb_file_per_table', 'default-storage-engine', 'performance-schema', 'max_allowed_packet', 'open_files_limit']"}

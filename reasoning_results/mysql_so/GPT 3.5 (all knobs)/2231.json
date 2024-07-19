@@ -1,0 +1,1 @@
+{"res": "['binlog_format', 'binlog_rows_query_log_events', 'binlog_stmt_cache_size', 'binlog_transaction_dependency_history_size', 'binlog_transaction_dependency_tracking']"}

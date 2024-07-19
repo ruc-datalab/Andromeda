@@ -1,0 +1,1 @@
+{"res": "Based on the details provided in your query and the symptoms of the errors encountered during the import process, the following parameters from the reference questions and manuals are recommended to potentially resolve the issues:\n\n['max_allowed_packet', 'innodb_buffer_pool_size', 'innodb_force_recovery']"}

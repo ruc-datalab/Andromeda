@@ -1,0 +1,1 @@
+{"res": "['temp_buffers', 'enable_nestloop', 'enable_bitmapscan', 'enable_seqscan', 'client_min_messages']"}

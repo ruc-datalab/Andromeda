@@ -1,0 +1,3 @@
+{
+    "res": "['bulk_insert_buffer_size', 'key_buffer_size', 'max_allowed_packet', 'innodb_buffer_pool_size']"
+}

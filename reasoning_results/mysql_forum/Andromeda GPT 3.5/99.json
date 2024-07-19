@@ -1,0 +1,1 @@
+{"res": "['innodb_table_locks', 'innodb_lock_wait_timeout', 'autocommit', 'innodb_thread_concurrency', 'innodb_thread_sleep_delay']"}

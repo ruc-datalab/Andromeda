@@ -1,0 +1,1 @@
+{"res": "['max_connections', 'thread_cache_size', 'innodb_buffer_pool_size', 'query_cache_size', 'table_open_cache', 'open_files_limit']"}

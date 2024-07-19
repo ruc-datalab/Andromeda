@@ -1,0 +1,1 @@
+{"res": "['innodb_autoinc_lock_mode', 'innodb_lock_wait_timeout', 'innodb_thread_concurrency', 'innodb_thread_sleep_delay', 'innodb_undo_directory', 'innodb_undo_logs', 'innodb_use_native_aio', 'max_connections', 'max_user_connections', 'thread_cache_size', 'thread_handling', 'thread_stack']"}

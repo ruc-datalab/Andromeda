@@ -1,0 +1,1 @@
+{"res": "['sql_mode', 'collation_connection', 'character_set_client', 'group_concat_max_len', 'character_set_connection', 'auto_increment_increment', 'time_zone']"}

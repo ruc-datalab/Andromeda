@@ -1,0 +1,1 @@
+{"res": "Based on the error message and the details provided in the documentation and your scenario, the recommended parameters to resolve the issue are:\n\n['log_bin_trust_function_creators', 'binlog_format']"}

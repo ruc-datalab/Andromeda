@@ -1,0 +1,3 @@
+{
+    "res": "['innodb_buffer_pool_size', 'key_buffer_size', 'innodb_log_buffer_size', 'max_connections', 'thread_cache_size', 'sort_buffer_size', 'read_buffer_siz', 'innodb_log_file_size', 'max_allowed_packet', 'innodb_print_all_deadlocks', 'general_log', 'innodb_thread_concurrency', 'connect_timeout', 'wait_timeout']"
+}

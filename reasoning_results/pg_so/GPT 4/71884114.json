@@ -1,0 +1,1 @@
+{"res": "['fsync', 'synchronous_commit', 'wal_writer_delay', 'checkpoint_timeout', 'checkpoint_completion_target', 'max_wal_size']"}

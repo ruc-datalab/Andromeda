@@ -1,0 +1,3 @@
+{
+    "res": "To address the issue of being unable to connect to MySQL when the number of connections exceeds 10, you likely need to increase the maximum number of connections that the server allows. The relevant parameter for this is `max_connections`. Here is the recommended parameter to modify in your MySQL configuration:\n\n```json\n[\"max_connections\"]\n```"
+}

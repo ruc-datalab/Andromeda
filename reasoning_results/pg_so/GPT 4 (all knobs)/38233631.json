@@ -1,0 +1,1 @@
+{"res": "['maintenance_work_mem', 'work_mem', 'wal_buffers', 'wal_writer_delay', 'commit_delay', 'max_wal_senders', 'wal_level', 'synchronous_commit', 'fsync', 'full_page_writes', 'checkpoint_completion_target', 'wal_writer_flush_after', 'autovacuum']"}

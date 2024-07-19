@@ -1,0 +1,1 @@
+{"res": "['max_locks_per_transaction', 'search_path', 'synchronous_commit', 'max_pred_locks_per_transaction', 'debug_deadlocks']"}

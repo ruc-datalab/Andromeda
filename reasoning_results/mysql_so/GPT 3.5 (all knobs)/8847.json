@@ -1,0 +1,1 @@
+{"res": "['gtid_mode', 'enforce_gtid_consistency', 'log_bin', 'log_slave_updates', 'server_id', 'master_info_repository', 'relay_log_info_repository']"}

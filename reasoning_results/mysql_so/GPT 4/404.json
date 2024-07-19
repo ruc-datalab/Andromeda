@@ -1,0 +1,1 @@
+{"res": "[\"innodb_buffer_pool_size=64M\", \"key_buffer_size=8M\", \"query_cache_size=16M\", \"max_connections=10\", \"table_open_cache=400\", \"thread_cache_size=4\"]"}

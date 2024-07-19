@@ -1,0 +1,3 @@
+{
+    "res": "['innodb_flush_log_at_trx_commit', 'innodb_buffer_pool_size', 'bulk_insert_buffer_size', 'autocommit']"
+}

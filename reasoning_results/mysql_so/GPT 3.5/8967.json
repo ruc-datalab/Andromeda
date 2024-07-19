@@ -1,0 +1,1 @@
+{"res": "['query_cache_size', 'sort_buffer_size', 'read_rnd_buffer_size', 'join_buffer_size']"}

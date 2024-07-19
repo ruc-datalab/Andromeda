@@ -1,0 +1,1 @@
+{"res": "['max_allowed_packet', 'wait_timeout', 'interactive_timeout', 'thread_cache_size', 'innodb_buffer_pool_size']"}

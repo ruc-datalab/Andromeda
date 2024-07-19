@@ -1,0 +1,1 @@
+{"res": "['tmp_table_size', 'max_heap_table_size', 'sort_buffer_size', 'read_rnd_buffer_size', 'join_buffer_size']"}

@@ -1,0 +1,1 @@
+{"res": "['binlog_checksum=NONE', 'slave_sql_verify_checksum=0', 'slave_net_timeout=60']"}

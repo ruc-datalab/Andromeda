@@ -1,0 +1,1 @@
+{"res": "['innodb_fast_shutdown', 'innodb_status_output', 'innodb_flush_log_at_trx_commit', 'sync_binlog', 'innodb_status_output_locks', 'flush']"}

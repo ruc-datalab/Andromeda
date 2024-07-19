@@ -1,0 +1,1 @@
+{"res": "['innodb_buffer_pool_size', 'innodb_buffer_pool_instances', 'innodb_page_cleaners', 'key_buffer_size', 'query_cache_size', 'tmp_table_size', 'innodb_log_buffer_size', 'max_connections', 'sort_buffer_size', 'read_buffer_size', 'read_rnd_buffer_size', 'join_buffer_size', 'thread_stack', 'binlog_cache_size']"}

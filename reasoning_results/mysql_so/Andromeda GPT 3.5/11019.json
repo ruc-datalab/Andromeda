@@ -1,0 +1,1 @@
+{"res": "['innodb_buffer_pool_size', 'innodb_force_recovery', 'key_buffer_size', 'general_log', 'innodb_print_all_deadlocks', 'group_replication_local_address', 'max_allowed_packet']"}

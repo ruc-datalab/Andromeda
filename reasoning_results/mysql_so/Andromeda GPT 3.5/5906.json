@@ -1,0 +1,1 @@
+{"res": "['innodb_lock_wait_timeout', 'innodb_print_all_deadlocks', 'innodb_deadlock_detect', 'general_log', 'innodb_table_locks', 'autocommit']"}

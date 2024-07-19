@@ -1,0 +1,1 @@
+{"res": "['plugin_load', 'plugin_dir', 'group_replication_group_name', 'group_replication_group_seeds', 'group_replication_ip_whitelist', 'group_replication_local_address', 'group_replication_recovery_use_ssl', 'group_replication_single_primary_mode', 'group_replication_ssl_mode', 'group_replication_start_on_boot']"}

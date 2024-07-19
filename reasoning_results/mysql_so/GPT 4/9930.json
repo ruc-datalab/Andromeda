@@ -1,0 +1,1 @@
+{"res": "['max_allowed_packet=1G', 'innodb_log_file_size=2048M', 'innodb_flush_log_at_trx_commit=1', 'innodb_flush_neighbors=1', 'innodb_strict_mode=1']"}

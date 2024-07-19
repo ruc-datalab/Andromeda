@@ -1,0 +1,1 @@
+{"res": "['autovacuum_vacuum_scale_factor', 'autovacuum_vacuum_threshold', 'autovacuum_max_workers', 'autovacuum_vacuum_cost_delay', 'autovacuum_vacuum_cost_limit', 'maintenance_work_mem', 'autovacuum_naptime', 'autovacuum_work_mem']"}

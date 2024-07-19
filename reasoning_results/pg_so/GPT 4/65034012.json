@@ -1,0 +1,1 @@
+{"res": "['CREATE INDEX staff_wages_title_upper_idx ON staff_wages (UPPER(title) varchar_pattern_ops)']"}

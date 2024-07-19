@@ -1,0 +1,1 @@
+{"res": "['enforce_gtid_consistency', 'gtid_mode', 'slave_parallel_type', 'slave_parallel_workers', 'slave_preserve_commit_order']"}

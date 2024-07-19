@@ -1,0 +1,1 @@
+{"res": "['innodb_autoinc_lock_mode', 'innodb_lock_wait_timeout', 'innodb_table_locks', 'table_lock_wait_timeout']"}

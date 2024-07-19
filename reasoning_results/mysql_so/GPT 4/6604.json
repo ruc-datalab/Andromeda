@@ -1,0 +1,1 @@
+{"res": "['innodb_buffer_pool_instances=8', 'innodb_page_cleaners=8', 'max_connections=5000', 'thread_cache_size=100']"}

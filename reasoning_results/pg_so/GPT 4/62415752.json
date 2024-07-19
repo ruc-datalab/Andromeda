@@ -1,0 +1,1 @@
+{"res": "['scram-sha-256', 'listen_addresses = \\'*\\'', 'password_encryption = \\'scram-sha-256\\'']"}

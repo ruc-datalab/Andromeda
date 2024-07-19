@@ -1,0 +1,1 @@
+{"res": "['innodb_file_per_table', 'innodb_fast_shutdown', 'innodb_temp_data_file_path', 'innodb_data_home_dir']"}

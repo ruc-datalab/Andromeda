@@ -1,0 +1,1 @@
+{"res": "['enable_hashagg', 'work_mem', 'enable_seqscan', 'enable_bitmapscan', 'enable_indexscan', 'enable_gathermerge', 'client_min_messages']"}

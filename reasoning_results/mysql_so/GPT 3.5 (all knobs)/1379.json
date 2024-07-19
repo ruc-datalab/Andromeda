@@ -1,0 +1,1 @@
+{"res": "['log_error', 'log_warnings', 'max_allowed_packet', 'max_connections', 'max_heap_table_size', 'max_join_size', 'max_sort_length', 'max_user_connections', 'thread_cache_size', 'tmp_table_size', 'wait_timeout']"}

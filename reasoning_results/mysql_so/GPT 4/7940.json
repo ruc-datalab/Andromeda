@@ -1,0 +1,1 @@
+{"res": "['innodb_buffer_pool_size=256M', 'innodb_log_file_size=64M', 'key_buffer_size=256M', 'query_cache_size=0', 'query_cache_type=0', 'table_open_cache=16000', 'thread_cache_size=100', 'max_connections=300', 'join_buffer_size=8M', 'sort_buffer_size=4M', 'read_buffer_size=2M', 'read_rnd_buffer_size=2M', 'tmp_table_size=256M', 'max_heap_table_size=256M']"}

@@ -1,0 +1,1 @@
+{"res": "['pg_catalog.pg_database', 'REVOKE SELECT ON pg_catalog.pg_database FROM PUBLIC']"}

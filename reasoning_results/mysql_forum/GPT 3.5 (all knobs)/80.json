@@ -1,0 +1,1 @@
+{"res": "['binlog_format', 'relay_log_purge', 'expire_logs_days']"}

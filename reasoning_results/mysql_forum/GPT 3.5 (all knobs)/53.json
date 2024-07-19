@@ -1,0 +1,1 @@
+{"res": "['explicit_defaults_for_timestamp', 'innodb_strict_mode', 'innodb_stats_on_metadata', 'innodb_stats_persistent', 'innodb_stats_persistent_sample_pages', 'innodb_stats_transient_sample_pages', 'sql_mode']"}

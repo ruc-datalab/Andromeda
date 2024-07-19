@@ -1,0 +1,1 @@
+{"res": "['LimitNOFILE=10000', 'table_open_cache=4000', 'max_open_files=8161']"}

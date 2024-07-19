@@ -1,0 +1,1 @@
+{"res": "['datadir=/var/lib/mysql', 'socket=/var/lib/mysql/mysql.sock', 'log-error=/var/log/mysql/log.err', 'log=/var/log/mysql/querylog', 'log-bin=/var/log/mysql/logbin', 'secure-auth', 'default-storage-engine=INNODB', 'innodb_flush_log_at_trx_commit=1', 'user=mysql', 'basedir=/var/lib', 'err-log=/var/log/mysqld.log', 'pid-file=/var/run/mysqld/mysqld.pid']"}

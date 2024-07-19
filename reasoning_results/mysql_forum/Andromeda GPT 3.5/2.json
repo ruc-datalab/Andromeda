@@ -1,0 +1,1 @@
+{"res": "['innodb_buffer_pool_size', 'key_buffer_size', 'open_files_limit', 'tmp_table_size', 'wait_timeout', 'myisam_sort_buffer_size', 'old_passwords', 'read_buffer_size', 'connect_timeout', 'interactive_timeout', 'max_connect_errors', 'read_rnd_buffer_size', 'sort_buffer_size', 'long_query_time', 'max_connections', 'socket']"}

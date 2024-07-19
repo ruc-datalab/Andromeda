@@ -1,0 +1,1 @@
+{"res": "['table_open_cache', 'key_buffer_size', 'query_cache_size', 'query_cache_type', 'thread_cache_size', 'concurrent_insert', 'low_priority_updates', 'tmp_table_size', 'max_heap_table_size']"}

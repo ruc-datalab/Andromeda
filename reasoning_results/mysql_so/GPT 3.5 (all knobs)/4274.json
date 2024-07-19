@@ -1,0 +1,1 @@
+{"res": "['max_allowed_packet', 'max_join_size', 'max_seeks_for_key', 'max_sort_length', 'max_points_in_geometry', 'max_length_for_sort_data', 'range_optimizer_max_mem_size']"}

@@ -1,0 +1,1 @@
+{"res": "['key_buffer_size', 'innodb_buffer_pool_size', 'character_set_connection', 'innodb_file_per_table', 'ft_min_word_len', 'ft_stopword_file', 'innodb_ft_server_stopword_table', 'ft_max_word_len']"}

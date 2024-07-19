@@ -1,0 +1,1 @@
+{"res": "['sql_mode=NO_ZERO_DATE,NO_ZERO_IN_DATE', 'max_allowed_packet=64M', 'innodb_buffer_pool_size=2G', 'innodb_log_file_size=512M', 'innodb_flush_log_at_trx_commit=2']"}

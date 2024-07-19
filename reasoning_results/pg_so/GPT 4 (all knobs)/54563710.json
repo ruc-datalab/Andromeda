@@ -1,0 +1,1 @@
+{"res": "['max_wal_senders', 'wal_keep_size', 'wal_sender_timeout', 'wal_level', 'max_replication_slots']"}

@@ -1,0 +1,1 @@
+{"res": "['enable_seqscan', 'enable_hashagg', 'enable_sort', 'work_mem', 'effective_cache_size']"}

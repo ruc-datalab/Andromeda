@@ -1,0 +1,1 @@
+{"res": "Based on the information provided and the context of the issue described, the relevant parameters to consider for the configuration of session handling in a PostgreSQL database with Symfony are:\n\n['port', 'db_username', 'db_password', 'database_host_access', 'database_port_access', 'database_name_access']"}

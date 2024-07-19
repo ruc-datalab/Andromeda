@@ -1,0 +1,1 @@
+{"res": "['innodb_flush_log_at_trx_commit', 'slow_query_log', 'key_buffer_size', 'innodb_buffer_pool_size', 'innodb_file_per_table']"}

@@ -1,0 +1,1 @@
+{"res": "['--single-transaction', '--quick', '--max_allowed_packet=512M']"}

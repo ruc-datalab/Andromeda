@@ -1,0 +1,1 @@
+{"res": "['wal_level', 'archive_mode', 'archive_command', 'max_wal_senders']"}

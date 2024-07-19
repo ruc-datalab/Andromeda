@@ -1,0 +1,1 @@
+{"res": "['tmp_table_size', 'max_heap_table_size', 'innodb_buffer_pool_size', 'sync_binlog', 'key_buffer_size']"}

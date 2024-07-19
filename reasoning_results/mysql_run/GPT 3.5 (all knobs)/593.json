@@ -1,0 +1,1 @@
+{"res": "['general_log', 'general_log_file', 'log', 'log_error', 'log_output', 'log_queries_not_using_indexes', 'log_slave_updates', 'log_slow_queries', 'slow_query_log', 'slow_query_log_file', 'sql_log_bin', 'sql_log_off', 'sql_log_update']"}

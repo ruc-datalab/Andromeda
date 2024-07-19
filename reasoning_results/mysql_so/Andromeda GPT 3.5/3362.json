@@ -1,0 +1,1 @@
+{"res": "['innodb_file_per_table', 'max_connections', 'foreign_key_checks', 'character_set_server']"}

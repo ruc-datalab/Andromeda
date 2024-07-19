@@ -1,0 +1,1 @@
+{"res": "To force the deletion of a table with foreign key constraints in MySQL, you can temporarily disable the enforcement of foreign key checks. This allows you to bypass the constraints during the deletion process. Here are the parameters you would adjust:\n\n```json\n[\"foreign_key_checks\"]\n```"}

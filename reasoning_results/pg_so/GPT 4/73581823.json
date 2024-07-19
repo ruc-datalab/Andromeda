@@ -1,0 +1,1 @@
+{"res": "['enable_nestloop = off', 'default_statistics_target = 1000', 'enable_bitmapscan = on']"}

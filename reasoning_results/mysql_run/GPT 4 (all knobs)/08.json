@@ -1,0 +1,1 @@
+{"res": "To handle a large number of MySQL connections and avoid errors related to exceeding the maximum number of connections, you can adjust the following parameters in your MySQL server configuration:\n\n```json\n[\"max_connections\", \"back_log\", \"thread_cache_size\"]\n```"}

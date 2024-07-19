@@ -1,0 +1,1 @@
+{"res": "['session_replication_role', 'max_connections', 'max_locks_per_transaction', 'max_pred_locks_per_transaction', 'max_prepared_transactions', 'max_replication_slots', 'max_stack_depth', 'max_wal_senders', 'shared_buffers', 'shared_memory_size', 'wal_buffers', 'wal_level', 'wal_segment_size', 'wal_sync_method']"}
