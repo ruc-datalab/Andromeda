@@ -5,7 +5,7 @@ Andromeda serves as a natural surrogate of DBAs to answer a wide range of natura
 ## Requirements
 
 - python = 3.8.12
-- 
+  
 You can install multiple packages:
 
 ```
