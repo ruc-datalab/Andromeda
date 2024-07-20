@@ -6,7 +6,6 @@ import faiss
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
-from train_sbert import SentenceEmbedding
 import random
 from info_nce import InfoNCE, info_nce
 import pickle
@@ -15,8 +14,7 @@ import copy
 class AlignmentTrainDataset(Dataset):
     def __init__(self, train_list):
         self.data = train_list
-        # self.data = random.choices(self.data, k=1000)
-            
+
     def __len__(self):
         return len(self.data)
 
@@ -27,13 +25,14 @@ class AlignmentTrainDataset(Dataset):
 class QuestionAlignment(nn.Module):
     def __init__(self, device, input_dim=768):
         super(QuestionAlignment, self).__init__()
-        self.alignment = nn.Sequential( 
+        self.alignment = nn.Sequential([
             nn.Linear(input_dim, 768),
             nn.LeakyReLU(),
-            nn.Linear(768, 768)
+            nn.Linear(768, 768),
+            nn.LeakyReLU(),
+            nn.Linear(768, 768),
             nn.LeakyReLU()
-            nn.Linear(768, 768)
-            nn.LeakyReLU()
+            ]
         )
 
     def forward(self, origin_embedding): ### [batchsize, 768], [batch_size, 1]
@@ -47,9 +46,9 @@ class ManualAlignment(nn.Module):
         self.alignment = nn.Sequential(
             nn.Linear(input_dim, 768),
             nn.LeakyReLU(),
-            nn.Linear(768, 768)
-            nn.LeakyReLU()
-            nn.Linear(768, 768)
+            nn.Linear(768, 768),
+            nn.LeakyReLU(),
+            nn.Linear(768, 768),
             nn.LeakyReLU()
         )
 
@@ -58,7 +57,7 @@ class ManualAlignment(nn.Module):
         return manual_embedding
 
 
-class trainer:
+class Trainer:
     def __init__(self, dataset, retrieve_topk = 5, lr = 0.001, epochs=10, nega_num=1):
         self.dataset = dataset
         self.retrieve_topk = retrieve_topk
@@ -203,17 +202,17 @@ class trainer:
         self.train_loader = DataLoader(training_data, batch_size=32, shuffle=True)
 
     def load_data(self):
-        with open(rf'./data/augment_train/{self.dataset}_train_augment.json', "r") as f:
+        with open(rf'./data/dataset/augment_train/{self.dataset}_train_augment.json', "r") as f:
             self.train_questions = json.loads(f.read())
-        with open(rf'./data/historical_questions/{self.dataset}_retrieval_data.json', "r") as f:
+        with open(rf'./data/dataset/historical_questions/{self.dataset}_retrieval_data.json', "r") as f:
             self.historical_questions = json.loads(f.read())
-        database = self.dataset.split("_")[0]
-        with open(rf'./data/manuals/{self.dataset}_manuals_data.json', "r") as f:
+        self.database = self.dataset.split("_")[0]
+        with open(rf'./data/dataset/manuals/{self.database}_manuals_data.json', "r") as f:
             self.manuals = json.loads(f.read())
 
         self.train_questions_embeds = np.load(rf'./core/sbert_embeds/{self.dataset}_train_augment.npy', allow_pickle=True)
         self.historical_questions_embeds = np.load(rf'./core/sbert_embeds/{self.dataset}_retrieval_data.npy', allow_pickle=True)
-        self.manuals_embeds = np.load(rf'./core/sbert_embeds/{self.dataset}_manuals_data.npy', allow_pickle=True)
+        self.manuals_embeds = np.load(rf'./core/sbert_embeds/{self.database}_manuals_data.npy', allow_pickle=True)
 
     
     def train(self):
@@ -321,8 +320,8 @@ class trainer:
 
                 except:
                     continue
-
+            torch.save(self.opt_m, rf'./core/alignment_model/{self.database}_manual.pth')
+            torch.save(self.opt_q, rf'./core/alignment_model/{self.database}_question.pth')
  
-
 
 
