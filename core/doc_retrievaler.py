@@ -13,7 +13,6 @@ class SentenceEmbedding(nn.Module):
         self.model = AutoModel.from_pretrained(model_name)
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.normalize = normalize
-        print('self.device', self.device)
         self.model.to(self.device)
 
     def forward(self, text_list):
@@ -38,10 +37,13 @@ class SentenceEmbedding(nn.Module):
 
 
 class DocRetrievaler:
-    def __init__(self, index_path, index_dim=768):
-        self.q_align = torch.load('core/alignment_model/{self.database}_question.pth')
-        self.m_align = torch.load('core/alignment_model/{self.database}_manual.pth')
-        self.sbert_model_path = rf"../sentence-transformers/all-mpnet-base-v2"
+    def __init__(self, dataset, index_path, data_path, index_dim=768):
+        self.dataset = dataset 
+        self.database = dataset.split("_")[0]
+        self.data_path = data_path
+        self.q_align = torch.load(rf'{self.data_path}/alignment_model/{self.database}_question.pth')
+        self.m_align = torch.load(rf'{self.data_path}/alignment_model/{self.database}_manual.pth')
+        self.sbert_model_path = rf"{self.data_path}/sentence-transformers/all-mpnet-base-v2"
         device = "cuda:1" if torch.cuda.is_available() else "cpu"
         self.sbert_model = SentenceEmbedding(self.sbert_model_path, device=device)  # 创建SBERT模型对象
 
@@ -49,25 +51,25 @@ class DocRetrievaler:
         self.index_path = index_path
         self.index_dim = index_dim
 
-        self.index = None
+        self.faiss_index = None
         self.index_id = None
 
     def build_index(self):
         self.faiss_index = faiss.IndexFlatIP(self.index_dim)
 
-        self.manuals_embeds = np.load('./core/sbert_embeds/{self.database}_manuals_data.npy')
-        self.historical_questions_embeds = np.load('./core/sbert_embeds/{self.dataset}_retrieval_data.npy')
+        self.manuals_embeds = np.load(rf'{self.data_path}/sbert_embeds/{self.database}_manuals_data.npy')
+        self.historical_questions_embeds = np.load(rf'{self.data_path}/sbert_embeds/{self.dataset}_retrieval_data.npy')
         
-        with open('../data/dataset/manuals/{self.database}_manuals_data.json', 'r') as f:
+        with open(rf'{self.data_path}/dataset/manuals/{self.database}_manuals_data.json', 'r') as f:
             self.manuals_data = json.load(f)
-        with open('../data/dataset/historical_questions/{self.dataset}_retrieval_data.json', 'r') as f:
+        with open(rf'{self.data_path}/dataset/historical_questions/{self.dataset}_retrieval_data.json', 'r') as f:
             self.historical_questions_data = json.load(f)
         
-        self.align_manuals_embeds = self.m_align(self.manuals_embeds)
-        self.align_historical_questions_embeds = self.q_align(self.historical_questions_embeds)
+        self.align_manuals_embeds = self.m_align(torch.Tensor(self.manuals_embeds))
+        self.align_historical_questions_embeds = self.q_align(torch.Tensor(self.historical_questions_embeds))
         
         self.all_retrieval = {}
-        self.all_retrieval_embds = np.concatenate([self.align_manuals_embeds, self.align_historical_questions_embeds], axis=0)
+        self.all_retrieval_embds = np.concatenate([self.align_manuals_embeds.detach().numpy(), self.align_historical_questions_embeds.detach().numpy()], axis=0)
 
 
         self.faiss_index.add(self.all_retrieval_embds)
@@ -79,14 +81,14 @@ class DocRetrievaler:
         self.index_id = np.concatenate((list(self.manuals_data.keys()) , list(self.historical_questions_data.keys())), axis=0)
 
     def search(self, query, topk=5):
-        if self.index is None and os.path.exists(self.index_path):
+        if self.faiss_index is None and os.path.exists(self.index_path):
             self.load_index()
         else:
             self.build_index()
 
-        query_embedding_list = self.sbert_model([query]).cpu().numpy()
+        query_embedding_list = self.sbert_model([query]).cpu().detach().numpy()
 
-        D, I = self.index.search(query_embedding_list, topk)
+        D, I = self.faiss_index.search(query_embedding_list, topk)
         
         return I
 

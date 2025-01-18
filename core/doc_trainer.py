@@ -23,16 +23,15 @@ class AlignmentTrainDataset(Dataset):
         return item[0][0], item[1][0], item[2][0], item[3][0], item[4][0]
     
 class QuestionAlignment(nn.Module):
-    def __init__(self, device, input_dim=768):
+    def __init__(self, input_dim=768):
         super(QuestionAlignment, self).__init__()
-        self.alignment = nn.Sequential([
+        self.alignment = nn.Sequential(
             nn.Linear(input_dim, 768),
             nn.LeakyReLU(),
             nn.Linear(768, 768),
             nn.LeakyReLU(),
             nn.Linear(768, 768),
             nn.LeakyReLU()
-            ]
         )
 
     def forward(self, origin_embedding): ### [batchsize, 768], [batch_size, 1]
@@ -41,7 +40,7 @@ class QuestionAlignment(nn.Module):
     
 
 class ManualAlignment(nn.Module):
-    def __init__(self, device, input_dim=768):
+    def __init__(self, input_dim=768):
         super(ManualAlignment, self).__init__()
         self.alignment = nn.Sequential(
             nn.Linear(input_dim, 768),
@@ -58,17 +57,18 @@ class ManualAlignment(nn.Module):
 
 
 class Trainer:
-    def __init__(self, dataset, retrieve_topk = 5, lr = 0.001, epochs=10, nega_num=1):
+    def __init__(self, dataset, data_path, retrieve_topk = 20, lr = 0.001, epochs=10, nega_num=1):
         self.dataset = dataset
         self.retrieve_topk = retrieve_topk
         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.lr = lr
         self.epochs = epochs
         self.nega_num = nega_num
+        self.data_path = data_path
         return 
     
     def gen_positive(self):
-
+        print('generate positive data.....')
         faiss_index1 = faiss.IndexFlatIP(self.historical_questions_embeds.shape[1])
         faiss_index1.add(self.historical_questions_embeds)
     
@@ -76,7 +76,7 @@ class Trainer:
         question_positive_pairs = []
 
         for i, qid in enumerate(list(self.train_questions.keys())):
-            question_positive_pairs.extend([(int(i), int(j)) for ind,j in enumerate(I[i]) if len(set(self.train_questions[qid]['parameter']) & set(list(self.historical_questions.keys())[j]['parameter'])) != 0])
+            question_positive_pairs.extend([(int(i), int(j)) for ind,j in enumerate(I[i]) if len(set(self.train_questions[qid]['parameter']) & set(self.historical_questions[list(self.historical_questions.keys())[j]]['parameter'])) != 0])
         
         faiss_index2 = faiss.IndexFlatIP(self.manuals_embeds.shape[1])
         faiss_index2.add(self.manuals_embeds)
@@ -104,12 +104,13 @@ class Trainer:
         return question2positiveq, question2positives
 
     def gen_negative(self):
+        print('generate negative data.....')
         faiss_index1 = faiss.IndexFlatIP(self.historical_questions_embeds.shape[1])
         faiss_index1.add(self.historical_questions_embeds)
 
         D, I = faiss_index1.search(self.train_questions_embeds, self.retrieve_topk)
         question_negative_pairs = []
-        for qid in self.train_questions:
+        for i, qid in enumerate(list(self.train_questions.keys())):
             question_negative_pairs.extend([(int(i), int(j)) for ind,j in enumerate(I[i]) if j != i and len(set(self.train_questions[qid]['parameter']) & set(self.historical_questions[list(self.historical_questions.keys())[j]]['parameter']))==0])
 
         faiss_index2 = faiss.IndexFlatIP(self.manuals_embeds.shape[1])
@@ -117,7 +118,7 @@ class Trainer:
         D, I = faiss_index2.search(self.train_questions_embeds, self.retrieve_topk)
         manual_negative_pairs = []
         
-        for qid in self.train_questions:
+        for i, qid in enumerate(list(self.train_questions.keys())):
             manual_negative_pairs.extend([(int(i), int(j)) for ind,j in enumerate(I[i]) if len(set(self.train_questions[qid]['parameter']) & set(self.manuals[list(self.manuals.keys())[j]]['parameters']))==0])
 
         question2negativeq = {}
@@ -137,21 +138,21 @@ class Trainer:
     def train_data(self):
         question2positiveq, question2positives  = self.gen_positive()
         question2negativeq, question2negatives = self.gen_negative()
-
+        # print(len(question2positiveq), len(question2positives), len(question2negativeq), len(question2negatives))
         training_data = []
 
-            #### qs
         for question_index in question2positives:
                 
             for positive_sentence_index in question2positives[question_index]:
                 if question_index not in question2negatives or question_index not in question2negativeq:
                         continue
+  
                 negative_list = question2negatives[question_index] + question2negativeq[question_index]
-                if len(negative_list) == 0:
+                if len(negative_list) < self.nega_num:
                     continue
-                
+
                 sampled_negative_index_list = random.sample(negative_list, self.nega_num)
-                train_emb = self.train_questions_embeds[int(question_index)]
+                query_emb = self.train_questions_embeds[int(question_index)]
 
                 positive_emb = self.manuals_embeds[int(positive_sentence_index.replace("rm_", ""))]
                 nega_emb_list = []
@@ -164,21 +165,21 @@ class Trainer:
                         index = int(neg_sentence_index.replace("rm_", ''))
                         nega_emb_list.append(self.manuals_embeds[index])
 
+     
                 nega_emb_list = np.array(nega_emb_list)
                 sampled_negative_index_list=  tuple(sampled_negative_index_list)
+
                 item = [[query_emb], [positive_emb], [nega_emb_list], [positive_sentence_index], [sampled_negative_index_list]]
                 training_data.append(item)
 
-
-        #### qq
         for question_index in question2positiveq:
             for positive_question_index in question2positiveq[question_index]:
                 if question_index not in question2negatives or question_index not in question2negativeq:
                     continue
+   
                 negative_list = question2negatives[question_index] + question2negativeq[question_index]
                 if len(negative_list) < self.nega_num:
                     continue
-            
                 sampled_negative_index_list = random.sample(negative_list, self.nega_num)
 
                 query_emb = self.train_questions_embeds[int(question_index)]
@@ -194,29 +195,32 @@ class Trainer:
                         nega_emb_list.append(self.manuals_embeds[index])
                 nega_emb_list = np.array(nega_emb_list)
                 sampled_negative_index_list=  tuple(sampled_negative_index_list)
-           
                 item = [[query_emb], [positive_emb], [nega_emb_list], [positive_question_index], [sampled_negative_index_list]]
                 training_data.append(item)
-        
         training_data = AlignmentTrainDataset(training_data)
         self.train_loader = DataLoader(training_data, batch_size=32, shuffle=True)
 
     def load_data(self):
-        with open(rf'./data/dataset/augment_train/{self.dataset}_train_augment.json', "r") as f:
+        with open(rf'{self.data_path}/dataset/train/{self.dataset}_train_data.json', "r") as f:
             self.train_questions = json.loads(f.read())
-        with open(rf'./data/dataset/historical_questions/{self.dataset}_retrieval_data.json', "r") as f:
+        for qid in self.train_questions :
+            if type(self.train_questions[qid]['parameter']).__name__ == 'str':
+                self.train_questions[qid]['parameter'] =[self.train_questions[qid]['parameter']]
+        with open(rf'{self.data_path}/dataset/historical_questions/{self.dataset}_retrieval_data.json', "r") as f:
             self.historical_questions = json.loads(f.read())
         self.database = self.dataset.split("_")[0]
-        with open(rf'./data/dataset/manuals/{self.database}_manuals_data.json', "r") as f:
+        with open(rf'{self.data_path}/dataset/manuals/{self.database}_manuals_data.json', "r") as f:
             self.manuals = json.loads(f.read())
 
-        self.train_questions_embeds = np.load(rf'./core/sbert_embeds/{self.dataset}_train_augment.npy', allow_pickle=True)
-        self.historical_questions_embeds = np.load(rf'./core/sbert_embeds/{self.dataset}_retrieval_data.npy', allow_pickle=True)
-        self.manuals_embeds = np.load(rf'./core/sbert_embeds/{self.database}_manuals_data.npy', allow_pickle=True)
+        self.train_questions_embeds = np.load(rf'{self.data_path}/dataset/train/{self.dataset}_train_data.npy', allow_pickle=True)
+        self.historical_questions_embeds = np.load(rf'{self.data_path}/sbert_embeds/{self.dataset}_retrieval_data.npy', allow_pickle=True)
+        self.manuals_embeds = np.load(rf'{self.data_path}/sbert_embeds/{self.database}_manuals_data.npy', allow_pickle=True)
 
     
     def train(self):
+        print("====Taining: start loading data====")
         self.load_data()
+        print("====Taining: start prepare data====")
         self.train_data()
 
         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -227,10 +231,11 @@ class Trainer:
         self.opt_m = torch.optim.Adam(self.manual_alignment.parameters(), lr=self.lr)
 
         loss_func = InfoNCE(negative_mode='paired')
-
+        print("====Taining: start training====")
         for epoch in range(2*(self.epochs+1)):
-            
+        
             for index, batch in enumerate(self.train_loader):
+                print('epoch:', epoch, index, len(self.train_loader))
                 batch_query_emb, batch_positive_emb, batch_negatives_emb, batch_positive_id, batch_negative_ids = batch
                 batch_positive_id = list(batch_positive_id)
                 new_batch_negative_ids = []
@@ -320,8 +325,11 @@ class Trainer:
 
                 except:
                     continue
-            torch.save(self.opt_m, rf'./core/alignment_model/{self.database}_manual.pth')
-            torch.save(self.opt_q, rf'./core/alignment_model/{self.database}_question.pth')
- 
+
+            
+            os.makedirs(rf'{self.data_path}/alignment_model/', exist_ok=True)
+            torch.save(self.manual_alignment, rf'{self.data_path}/alignment_model/{self.database}_manual.pth')
+            torch.save(self.question_alignment, rf'{self.data_path}/alignment_model/{self.database}_question.pth')
+
 
 

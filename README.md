@@ -12,7 +12,6 @@ You can install multiple packages:
 pip install -r requirements.txt
 ```
 
-
 ## 1. Quick start
 
 ### run example to generate hybrid-pipeline
@@ -60,8 +59,21 @@ The file `example.py` is an example. Modify `query` according to your configurat
 │   └── mysql_so_train_data.json
 │   └── pg_so_train_data.json
 │   └── mysql_run_train_data.json
-
+-sbert_embeds
+├── mysql_forum_retrieval_data.npy
+├── mysql_forum_train_augment.npy
+├── mysql_run_retrieval_data.npy
+├── mysql_run_train_augment.npy
+├── mysql_so_retrieval_data.npy
+├── mysql_so_train_augment.npy
+├── pg_so_retrieval_data.npy
+├── pg_manuals_data.npy
+├── mysql_manuals_data.npy
+-sentence-transformers
+├── all-mpnet-base-v2
 ```
+
+The vectors in sbert_embeds are directly ebedded by model in sentence-transformers.
 
 ## 3. Results
 
